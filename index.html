@@ -9,10 +9,10 @@
 <header class="main-header">
     <a class="main-header-logo"><img src="img/logo_device.svg" width="165" height="37" alt="Логотип магазина «Девайс»"></a>
 
-    <div class="search-link"><a>Поиск по сайту</a></div>
-    <div class="login-link"><a>Войти</a></div>
-    <div class="compare-link"><a>Сравнить</a></div>
-    <div class="cart-link"><a>Корзина</a></div>
+    <div class="search-link"><a href="#">Поиск по сайту</a></div>
+    <div class="login-link"><a href="#">Войти</a></div>
+    <div class="compare-link"><a href="#">Сравнить</a></div>
+    <div class="cart-link"><a href="#">Корзина</a></div>
 
     <nav class="main-navigation">
         <ul class="site-navigation">
@@ -60,6 +60,31 @@
 
         <a href="#" class="button-link">Напишите нам</a>
     </section>
+
+ <!--  Pop-up Contact us -->
+    <section class="contact-us">
+        <form action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="user-field">
+                <label for="user-field">Ваше имя:</label>
+                <input id="user-field" type="text" name="user_name" value="Имя Фамилия">
+            </div>
+
+            <div class="email-field">
+                <label for="email-field">Ваш e-mail:</label>
+                <input id="email-field" type="text" name="user_email" value="email@example.com">
+            </div>
+
+            <div class="text-field">
+                <label for="text-field">Ваш e-mail:</label>
+                <textarea id="text-field" name="text-field" cols="30" rows="10">В свободной форме</textarea>
+            </div>
+
+            <input type="submit" value="Отправить">
+
+        </form>
+    </section>
+<!--  // Pop-up Contact us -->
 
 </main>
 
