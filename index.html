@@ -9,7 +9,14 @@
 <header class="main-header">
     <a class="main-header-logo"><img src="img/logo_device.svg" width="165" height="37" alt="Логотип магазина «Девайс»"></a>
 
-    <div class="search-link"><a href="#">Поиск по сайту</a></div>
+    <div class="search-link">
+        <form action="https://echo.htmlacademy.ru" method="post">
+            <input type="search" name="search" placeholder="Поиск по сайту" autofocus> 
+            <button>
+                <span class="visually-hidden">Найти</span>
+            </button>
+        </form>
+    </div>
     <div class="login-link"><a href="#">Войти</a></div>
     <div class="compare-link"><a href="#">Сравнить</a></div>
     <div class="cart-link"><a href="#">Корзина</a></div>
@@ -61,31 +68,6 @@
         <a href="#" class="button-link">Напишите нам</a>
     </section>
 
- <!--  Pop-up Contact us -->
-    <section class="contact-us">
-        <form action="https://echo.htmlacademy.ru" method="post">
-
-            <div class="user-field">
-                <label for="user-field">Ваше имя:</label>
-                <input id="user-field" type="text" name="user_name" value="Имя Фамилия">
-            </div>
-
-            <div class="email-field">
-                <label for="email-field">Ваш e-mail:</label>
-                <input id="email-field" type="text" name="user_email" value="email@example.com">
-            </div>
-
-            <div class="text-field">
-                <label for="text-field">Ваш e-mail:</label>
-                <textarea id="text-field" name="text-field" cols="30" rows="10">В свободной форме</textarea>
-            </div>
-
-            <input type="submit" value="Отправить">
-
-        </form>
-    </section>
-<!--  // Pop-up Contact us -->
-
 </main>
 
 <footer class="main-footer">
@@ -94,9 +76,9 @@
     <p class="footer-address">г. Москва, ул. Строителей, 15</p>
     <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
 
-    <div class="login-link"><a>Войти</a></div>
-    <div class="compare-link"><a>Сравнить</a></div>
-    <div class="cart-link"><a>Корзина</a></div>
+    <div class="login-link"><a href="#">Войти</a></div>
+    <div class="compare-link"><a href="#">Сравнить</a></div>
+    <div class="cart-link"><a href="#">Корзина</a></div>
 
     <ul class="site-navigation site-navigation-footer">
         <li><a href="delivery.html">Доставка</a></li>
@@ -112,6 +94,37 @@
 
     <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
 </footer>
+
+<!--  Pop-up Contact us -->
+<section class="contact-us">
+    <form action="https://echo.htmlacademy.ru" method="post">
+
+        <div class="user-field">
+            <label for="user-field">Ваше имя:</label>
+            <input id="user-field" type="text" name="user_name" placeholder="Имя Фамилия">
+        </div>
+
+        <div class="email-field">
+            <label for="email-field">Ваш e-mail:</label>
+            <input id="email-field" type="email" name="user_email" placeholder="email@example.com" required>
+        </div>
+
+        <div class="text-field">
+            <label for="text-field">Текст письма:</label>
+            <textarea id="text-field" name="text-field" cols="30" rows="5">В свободной форме</textarea>
+        </div>
+
+        <button class="button-link">Отправить</button>
+
+    </form>
+</section>
+<!--  // Pop-up Contact us -->
+
+<!-- Pop-up map -->
+<div class="pop-up-map">
+    <img src="img/map_big.jpg" alt="Карта">
+</div>
+<!-- // Pop-up map -->
 
 </body>
 </html>
