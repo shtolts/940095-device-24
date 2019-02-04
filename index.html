@@ -11,10 +11,10 @@
 
     <div class="search-link">
         <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" placeholder="Поиск по сайту" required> 
-            <button>
-                <span class="visually-hidden">Найти</span>
-            </button>
+            <label for="search-field" class="visually-hidden">Поиск</label>
+            <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" required> 
+
+            <button type="submit">Найти</button>
         </form>
     </div>
     <div class="login-link"><a href="#">Войти</a></div>
@@ -114,9 +114,9 @@
             <textarea id="text-field" name="text-field" cols="30" rows="5" required>В свободной форме</textarea>
         </div>
 
-        <button class="button-link">Отправить</button>
+        <button type="submit" class="button-link">Отправить</button>
     </form>
-    <button class="button-close">
+    <button type="button" class="button-close">
         <span class="visually-hidden">Закрыть окно</span>
     </button>
 </section>
@@ -125,7 +125,7 @@
 <!-- Pop-up map -->
 <div class="pop-up-map">
     <img src="img/map_big.jpg" alt="Карта">
-    <button class="button-close">
+    <button type="button" class="button-close">
         <span class="visually-hidden">Закрыть окно</span>
     </button>
 </div>

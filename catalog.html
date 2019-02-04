@@ -10,10 +10,10 @@
     
     <div class="search-link">
         <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" placeholder="Поиск по сайту" required> 
-            <button>
-                <span class="visually-hidden">Найти</span>
-            </button>
+            <label for="search-field" class="visually-hidden">Поиск</label>
+            <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" required> 
+
+            <button type="submit">Найти</button>
         </form>
     </div>
     <div class="user-link"><a href="">Валентин Петухов</a></div>
@@ -57,7 +57,7 @@
             <b class="filter-title">Стоимость</b>
             <!-- Ползунок -->
             <fieldset class="filter-wrapper">
-            <legend class="filter-title">Цвет</legend>
+                <legend class="filter-title">Цвет</legend>
                 <label>
                     <input type="checkbox" name="color" value="black" checked>Черный
                 </label>
@@ -90,7 +90,7 @@
                 </label>
             </fieldset>
 
-            <button class="button-link">Показать</button>
+            <button type="submit" class="button-link">Показать</button>
         </form>
      </section>
     <!-- // Filters -->
