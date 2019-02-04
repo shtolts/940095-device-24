@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<title>HTML Academy: Девайс</title>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 
     <div class="search-link">
         <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" placeholder="Поиск по сайту" autofocus> 
+            <input type="search" name="search" placeholder="Поиск по сайту" required> 
             <button>
                 <span class="visually-hidden">Найти</span>
             </button>
@@ -101,7 +101,7 @@
 
         <div class="user-field">
             <label for="user-field">Ваше имя:</label>
-            <input id="user-field" type="text" name="user_name" placeholder="Имя Фамилия">
+            <input id="user-field" type="text" name="user_name" placeholder="Имя Фамилия" required>
         </div>
 
         <div class="email-field">
@@ -111,18 +111,23 @@
 
         <div class="text-field">
             <label for="text-field">Текст письма:</label>
-            <textarea id="text-field" name="text-field" cols="30" rows="5">В свободной форме</textarea>
+            <textarea id="text-field" name="text-field" cols="30" rows="5" required>В свободной форме</textarea>
         </div>
 
         <button class="button-link">Отправить</button>
-
     </form>
+    <button class="button-close">
+        <span class="visually-hidden">Закрыть окно</span>
+    </button>
 </section>
 <!--  // Pop-up Contact us -->
 
 <!-- Pop-up map -->
 <div class="pop-up-map">
     <img src="img/map_big.jpg" alt="Карта">
+    <button class="button-close">
+        <span class="visually-hidden">Закрыть окно</span>
+    </button>
 </div>
 <!-- // Pop-up map -->
 
