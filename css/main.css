@@ -1,0 +1,64 @@
+html { 
+    box-sizing: border-box; 
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; 
+}
+
+body {
+    font-family: 'Open-sans', Arial, sans-serif;
+}
+
+img { 
+    max-width: 100% 
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-header {
+    background-color: #f7e296;
+}
+
+.site-navigation {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000000;
+
+    list-style: none;
+}
+
+.site-navigation a {
+    color: #000000;
+}
+
+/* About us */
+
+.about-us-title {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 48px;
+}
+
+.about-us p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #464646;
+}
+.transport-company-list {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+
+
+
