@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/gilroy/stylesheet.css">
+    <link rel="stylesheet" href="fonts/opensans/stylesheet.css">
 </head>
 <body>
 
@@ -18,14 +20,17 @@
     <div class="search-link">
         <form action="https://echo.htmlacademy.ru" method="post">
             <label for="search-field" class="visually-hidden">Поиск</label>
-            <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" required> 
+            <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" class="search-field" required> 
 
-            <button type="submit">Найти</button>
+            <button type="submit" class="search-button">Найти</button>
         </form>
     </div>
-    <div class="login-link"><a href="#">Войти</a></div>
-    <div class="compare-link"><a href="#">Сравнить</a></div>
-    <div class="cart-link"><a href="#">Корзина</a></div>
+
+    <div class="user-navigation">
+        <div class="login-link"><a href="#">Войти</a></div>
+        <div class="compare-link"><a href="#">Сравнить</a></div>
+        <div class="cart-link"><a href="#">Корзина</a></div>
+    </div>
 
     <nav class="main-navigation">
         <ul class="site-navigation">
@@ -50,8 +55,37 @@
 <main>
     <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
 
+    <section class="slider-products"></section>
+
+    <!--  Popular products -->
+    <section class="popular-products">
+        <h2 class="visually-hidden">Популярные продукты</h2>
+    </section>
+    <!--  // Popular products -->
+
+    <section class="slider-services">
+        <ul class="slider-services-buttons">
+            <li><button class="button-basic button-slider">Доставка</button></li>
+            <li><button class="button-basic button-slider">Гарантия</button></li>
+            <li><button class="button-basic button-slider button-slider-active">Кредит</button></li>
+        </ul>
+        <div class="slider-services-card">
+            <h2 class="title">Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="slider-services-card">
+            <h2 class="title">Гарантия</h2>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.</p>
+            <p>Товар, не дом, конечно же.</p>
+        </div>
+        <div class="slider-services-card">
+            <h2 class="title">Кредит</h2>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
+    </section>
+
     <section class="about-us">
-        <h2 class="about-us-title">О нас</h2>
+        <h2 class="title">О нас</h2>
 
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 
@@ -62,16 +96,16 @@
             <li>ЖелДорЭкспедиция</li>
         </ul>
 
-        <a href="#" class="button-link">Подробнее о нас</a>
+        <a href="#" class="button-basic">Подробнее о нас</a>
     </section>
 
     <section class="contacts">
-        <h2>Контакты</h2>
+        <h2 class="title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         
        	<img src="img/map.jpg" width="560" height="222" alt="Карта">
 
-        <a href="#" class="button-link">Напишите нам</a>
+        <a href="#" class="button-basic">Напишите нам</a>
     </section>
 
 </main>
@@ -82,23 +116,25 @@
     <p class="footer-address">г. Москва, ул. Строителей, 15</p>
     <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
 
-    <div class="login-link"><a href="#">Войти</a></div>
-    <div class="compare-link"><a href="#">Сравнить</a></div>
-    <div class="cart-link"><a href="#">Корзина</a></div>
+    <div class="user-navigation user-navigation-footer">
+        <div class="login-link"><a href="#">Войти</a></div>
+        <div class="compare-link"><a href="#">Сравнить</a></div>
+        <div class="cart-link"><a href="#">Корзина</a></div>
+    </div>
 
     <ul class="site-navigation site-navigation-footer">
         <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="guarantees.html">Гарантии</a></li>
+        <li><a href="guarantees.html">Гарантия</a></li>
         <li><a href="contacts.html">Контакты</a></li>
     </ul>
 
-    <ul>
+    <ul class="social-icons">
         <li><a class="social-button" href="#">Фейсбук</a></li>
         <li><a class="social-button" href="#">Инстаграм</a></li>
         <li><a class="social-button" href="#">Твиттер</a></li>
     </ul>
 
-    <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+    <a href="https://htmlacademy.ru">HTML Academy</a>
 </footer>
 
 <!--  Pop-up Contact us -->
@@ -120,7 +156,7 @@
             <textarea id="text-field" name="text-field" cols="30" rows="5" required>В свободной форме</textarea>
         </div>
 
-        <button type="submit" class="button-link">Отправить</button>
+        <button type="submit" class="button-basic">Отправить</button>
     </form>
     <button type="button" class="button-close">
         <span class="visually-hidden">Закрыть окно</span>
