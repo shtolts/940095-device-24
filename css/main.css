@@ -145,6 +145,35 @@ a {
 
     list-style: none;
 }
+/* Slider-products */
+.slider-products-lead {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 56px;
+}
+.slider-products-description {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    color: #464646;
+}
+.slider-products-properties th {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: #464646;
+}
+.slider-products-properties td {
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    letter-spacing: 0.2px;
+}
 
 /* Slider-services */
 .slider-services {
