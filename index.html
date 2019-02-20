@@ -17,25 +17,29 @@
 <header class="main-header">
     <a class="main-header-logo"><img src="img/logo_device.svg" width="165" height="37" alt="Логотип магазина «Девайс»"></a>
 
-    <div class="search-link">
-        <form action="https://echo.htmlacademy.ru" method="post">
-            <label for="search-field" class="visually-hidden">Поиск</label>
-            <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" class="search-field" required> 
+    <div class="wrapper-nav">
+        <div class="search-link">
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <label for="search-field" class="visually-hidden">Поиск</label>
+                <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" class="search-field" required> 
 
-            <button type="submit" class="search-button">Найти</button>
-        </form>
-    </div>
+                <button type="submit" class="search-button">Найти</button>
+            </form>
+        </div>
 
-    <div class="user-navigation">
-        <div class="login-link"><a href="#">Войти</a></div>
-        <div class="compare-link"><a href="#">Сравнить</a></div>
-        <div class="cart-link"><a href="#">Корзина</a></div>
+        <div class="user-navigation">
+            <div class="login-link"><a href="#">Войти</a></div>
+            <div class="wrapper-user">
+                <div class="compare-link"><a href="#">Сравнить</a></div>
+                <div class="cart-link"><a href="#">Корзина</a></div>
+            </div>
+        </div>
     </div>
 
     <nav class="main-navigation">
         <ul class="site-navigation">
-            <li>
-                <a href="catalog.html">Каталог товаров</a>
+            <li class="catalog">
+                <a class="catalog-link-drop-down">Каталог товаров</a>
                 <ul class="site-navigation-drop-down">
                     <li><a href="catalog.html">Виртуальная реальность</a></li>
                     <li><a href="catalog.html">Моноподы для селфи</a></li>
@@ -45,8 +49,8 @@
                     <li><a href="catalog.html">Квадрокоптеры</a></li>
                 </ul>
             </li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="guarantees.html">Гарантии</a></li>
+            <li class="delievery"><a href="delivery.html">Доставка</a></li>
+            <li class="guarantee"><a href="guarantees.html">Гарантия</a></li>
             <li><a href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
@@ -54,45 +58,101 @@
 
 <main>
     <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
-
+    <!--  Slider products  -->
     <article class="slider-products">
-        <img src="img/slider_stick.png" alt="Селфи-палка" width="384" height="486">
+        <div class="slider-container">
+            <img src="img/slider_stick.png" alt="Селфи-палка" width="384" height="486" class="slider-img">
+            
+            <div class="slider-text-wrapper">
+                <span class="slider-products-number">01</span>
 
-        <span class="slider-products-number">01</span>
+                <b class="slider-products-lead">Делай селфи,<br> как Бен Стиллер!</b>
 
-        <b class="slider-products-lead">Делай селфи, как Бен Стиллер!</b>
+                <p class="slider-products-description">Самая длинная палка для селфи доступна в нашем магазине.
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 
-        <p class="slider-products-description">Самая длинная палка для селфи доступна в нашем магазине.
-        Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a href="#" class="button-basic">Подробнее</a>
 
-        <a href="#" class="button-basic">Подробнее</a>
+                <table class="slider-products-properties">
+                  <tr>
+                    <th>Длина палки</th>
+                    <th>Вес палки</th> 
+                    <th>Материал</th>
+                  </tr>
+                  <tr>
+                    <td>8,5 м</td>
+                    <td>5 кг</td> 
+                    <td>Карбон</td>
+                  </tr>
+                </table>
 
-        <table class="slider-products-properties">
-          <tr>
-            <th>Длина палки</th>
-            <th>Вес палки</th> 
-            <th>Материал</th>
-          </tr>
-          <tr>
-            <td>8,5 м</td>
-            <td>5 кг</td> 
-            <td>Карбон</td>
-          </tr>
-        </table>
-
-        <ul class="product-slider-pagination">
-          <li class="active"></li>
-          <li></li>
-          <li></li>
-        </ul>
+                <ul class="product-slider-pagination">
+                  <li class="active"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+            </div>
+        </div>
     </article>
+    <!--  // Slider products  -->
 
     <!--  Popular products -->
     <section class="popular-products">
-        <h2 class="visually-hidden">Популярные продукты</h2>
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ul class="popular-product-list">
+
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-vr"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Виртуальная реальность</a>
+                </h3>
+            </li>
+
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-monopod"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Моноподы для селфи</a>
+                </h3>
+            </li>
+            
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-action-cam"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Экшн-камеры</a>
+                </h3>
+            </li>
+            
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-fitness"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Фитнес-браслеты</a>
+                </h3>
+            </li>
+
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-watches"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Умные часы</a>
+                </h3>
+            </li>
+            
+            <li class="product-list-item">
+                <div class="product-list-item-icon product-list-item-icon-dron"></div>
+
+                <h3 class="product-list-item-title">
+                    <a href="catalog-item.html">Квадрокоптеры</a>
+                </h3>
+            </li>
+        </ul>
     </section>
     <!--  // Popular products -->
 
+    <!-- Slider services -->
     <section class="slider-services">
         <ul class="slider-services-buttons">
             <li><button class="button-basic button-slider">Доставка</button></li>
@@ -113,7 +173,15 @@
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
     </section>
+    <!-- // Slider services -->
 
+    <!-- Companies -->
+    <section class="companies">
+        
+    </section>
+    <!-- // Companies -->
+
+    <!-- About us -->
     <section class="about-us">
         <h2 class="title">О нас</h2>
 
