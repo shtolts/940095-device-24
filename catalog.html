@@ -56,15 +56,54 @@
 <main>
     <h1 class="title">Моноподы для селфи</h1>
 
-    <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a>Моноподы для селфи</a></li>
-    </ul>
+    <div class="container">
+        <section class="breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог товаров</a></li>
+                <li><a>Моноподы для селфи</a></li>
+            </ul>
+        </section>
+    </div>
 
-    <!-- Filters -->
+    <div class="top-catalog-line">
+        <div class="container">
+            <div class="top-catalog-line-inner">
+                <h2 class="filter-heading filter-heading-pseudo">Фильтр:</h2>
+                <!-- Selector -->
+                <section class="sorting">
+                    <h2 class="sorting-heading">Сортировка:</h2>
+
+                    <ul class="sorting-list">
+                        <li>По цене</li>
+                        <li>По типу</li>
+                        <li>По популярности</li>
+                    </ul>
+
+                    <ul class="sorting-arrows">
+                      <li class="sorting-arrow">
+                        <a href="#">
+                          <span class="visually-hidden">По возрастанию</span>
+                        </a>
+                      </li>
+
+                      <li class="sorting-arrows">
+                        <a href="#">
+                          <span class="visually-hidden">По убыванию</span>
+                        </a>
+                      </li>
+                    </ul>
+                </section>
+                <!-- // Selector -->
+            </div>
+        </div>
+    </div>
+    
+
     <section class="filters">
-        <h2 class="filter-heading">Фильтр:</h2>
+        <h2 class="filter-heading visually-hidden">Фильтр:</h2>
+
+        <div class="form">
         <form action="https://echo.htmlacademy.ru" method="post">
             <b class="filter-title">Стоимость</b>
             <!-- Ползунок -->
@@ -104,9 +143,13 @@
 
             <button type="submit" class="button-basic">Показать</button>
         </form>
+        </div>
      </section>
     <!-- // Filters -->
-    
+
+    <div class="bg-gradient">
+    <div class="container flexit">
+
     <!-- Catalog -->
     <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
@@ -164,6 +207,9 @@
             <!-- // Catalog item card -->
         </ul>
     </section>
+    
+    </div>
+    </div>
     <!-- // Catalog -->
 </main>
 

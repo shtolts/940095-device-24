@@ -473,25 +473,47 @@ a {
 
 /* CATALOG */
 .breadcrumbs {
-    margin: 0;
+    margin: 0 60px;
+}
+.breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0 43px;
     padding: 0;
     list-style: none;
 }
-.breadcrumbs a {
+.breadcrumbs-list a {
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
     color: #000;
     opacity: 0.3;
 }
-.breadcrumbs a[href]:hover, .breadcrumbs a[href]:focus {
+.breadcrumbs-list a[href]:hover, .breadcrumbs a[href]:focus {
     opacity: 0.6;
 }
-.breadcrumbs a[href]:active {
+.breadcrumbs-list a[href]:active {
     opacity: 0.1;
 }
+
+
+.crumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  
+}
+
 /* Filter */
-.filter-heading {
+.top-catalog-line {
+    background-image: linear-gradient(to right, #dcdcdc, #dcdcdc 50%, #ebebeb 50%, #ebebeb);
+}
+.top-catalog-line-inner {
+    display: flex;
+    margin-left: 60px;
+
+}
+.sorting-heading {
+    margin: 0;
     font-family: 'Gilroy', Arial, sans-serif;
     font-size: 16px;
     font-weight: 800;
@@ -499,8 +521,46 @@ a {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+.sorting {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 760px;
+    padding: 20px 0;
+    padding-top: 18px;
+    padding-left: 72px;
+
+    background-color: #ebebeb;
+}
+.sorting-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 480px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+
+    list-style: none;
+}
+.sorting-arrows {
+    display: flex;
+}
+.filter-heading-pseudo {
+    margin: 0;
+    font-family: 'Gilroy', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #dcdcdc;
+}
+
 .filter-wrapper {
     border: none;
+    margin-right: 68px;
 }
 .filter-title {
     font-family: 'Gilroy', Arial, sans-serif;
@@ -516,10 +576,19 @@ a {
     letter-spacing: 0.1px;
 }
 /* Catalog */
-.catalog-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.bg-gradient {
+    background-image: linear-gradient(to right, #efefef, #efefef 50%, #fff 50%, #fff);
+}
+.flexit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog {
+    background-color: #fff;
+}
+.catalog-item {
+    margin-right: 40px;
 }
 .catalog-item-title {
     font-family: 'Gilroy', Arial, sans-serif;
