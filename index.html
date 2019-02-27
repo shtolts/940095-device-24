@@ -15,27 +15,27 @@
 <body>
 
 <div class="container">
-    <header class="main-header main-header--bottom-margin">
+    <header class="main-header main-header--higher">
         <a href="index.html" class="main-header-logo"><img src="img/logo_device.svg" width="165" height="37" alt="Логотип магазина «Девайс»"></a>
-        
-        <div class="search-link">
-            <form action="https://echo.htmlacademy.ru" method="post">
-                <label for="search-field" class="visually-hidden">Поиск</label>
-                <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" class="search-field" required> 
+        <div class="header-row">
+            <div class="search-link">
+                <form action="https://echo.htmlacademy.ru" method="post" class="search-link-form">
+                    <label for="search-field" class="visually-hidden">Поиск</label>
+                    <input type="search" id="search-field" name="search" placeholder="Поиск по сайту" class="search-field" required> 
 
-                <button type="submit" class="search-button">Найти</button>
-            </form>
+                    <button type="submit" class="search-button">Найти</button>
+                </form>
+            </div>
+
+            <div class="user-navigation">
+                <div class="login-link"><a href="#">Войти</a></div>
+                <div class="compare-link"><a href="#">Сравнить</a></div>
+                <div class="cart-link"><a href="#">Корзина</a></div>
+            </div>
         </div>
-
-        <div class="user-navigation">
-            <div class="login-link"><a href="#">Войти</a></div>
-            <div class="compare-link"><a href="#">Сравнить</a></div>
-            <div class="cart-link"><a href="#">Корзина</a></div>
-        </div>
-
         <nav class="main-navigation">
             <ul class="site-navigation">
-                <li>
+                <li class="catalog-link">
                     <a href="catalog.html">Каталог товаров</a>
                     <ul class="site-navigation-drop-down site-navigation-drop-down--hidden">
                         <ul class="navigation-drop-down-column">
@@ -52,9 +52,9 @@
                         </ul>
                     </ul>
                 </li>
-                <li class="delievery"><a href="delivery.html">Доставка</a></li>
-                <li class="guarantee"><a href="guarantees.html">Гарантия</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li class="delievery-link"><a href="delivery.html">Доставка</a></li>
+                <li class="guarantee-link"><a href="guarantees.html">Гарантия</a></li>
+                <li class="contacts-link"><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
