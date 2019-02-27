@@ -8,7 +8,7 @@ body {
 }
 
 img { 
-    max-width: 100% 
+    max-width: 100%; 
 }
 
 a {
@@ -36,6 +36,7 @@ a {
 }
 .title {
     margin: 0;
+    margin-bottom: 20px;
     font-family: 'Gilroy', Arial, sans-serif;
     font-size: 47px;
     font-weight: 800;
@@ -43,20 +44,48 @@ a {
     line-height: 48px;
 }
 .button-basic {
+    position: relative;
+    z-index: 0;
     display: inline-block;
+    padding: 10px 40px;
 
     border: none;
     font-family: 'Gilroy', Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
-    letter-spacing: 2px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     color: #000000;
-    background-color: #f0c52e;
+    border: none;
+    background: none;
 
     cursor: pointer;
 }
+.button-basic:focus, .button-basic:active {
+    color: #be9c22;
+}
+.button-basic::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 42%;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    transition: all 200ms;
+    background-color: #f0c52e;
+}
+.button-basic:hover::before,
+.button-basic:focus::before {
+    top: 0;
+    bottom: 0;
 
+    width: 100%;
+    height: 100%;
+}
 /* Header */
 
 .main-header {
@@ -338,12 +367,13 @@ a {
     letter-spacing: 0.2px;
 }
 /* Popular products */
+.popular-products {
+    margin-bottom: 70px;
+}
 .popular-product-list {
     display: flex;
     justify-content: space-between;
-    width: 1160px;
-    margin-right: auto;
-    margin-left: auto;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none; 
@@ -397,17 +427,81 @@ a {
     color: #000000;
 }
 /* Slider-services */
-.slider-services {
-    background-color: #e5e5e5;
+.bg-slider-services {
+    background-image: linear-gradient(#fff,#fff 100px,#e5e5e5 100px);
 }
-.slider-services ul {
+.slider-services {
+    display: flex;
+    min-height: 310px;
+    margin-bottom: 95px;
+    padding-bottom: 70px;
+    justify-content: space-between;
+
+}
+.slider-services-buttons-inner {
+    width: 280px;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    border-right: 7px solid #000;
+}
+.slider-services-buttons {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.button-slider-active {
-    color: #f0c52e;
-    background-color: #000;
+.slider-services-buttons li {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    
+}
+.button-slider--active {
+    /*color: #f0c52e;*/
+    position: relative;
+    color: #f7e184;
+    /*background-color: #000;*/
+}
+.button-slider--active::before, .button-slider--active:focus::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+
+    width: 280px;
+    height: 100%;
+
+    background: #000;
+}
+.service-card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+    padding-top: 70px;
+}
+.service-slide--unactive {
+    display: none;
+}
+.slider-services-card {
+    width: 467px;
+}
+.slider-services-card::after {
+    content: '';
+    position: absolute;
+    top: 85px;
+    right: 0;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+.slider-services-card--delievery::after {
+    background-image: url(../img/icon_delivery.svg);
+}
+.slider-services-card--guarantee::after {
+    background-image: url(../img/icon_warranty.svg);
 }
 .slider-services-card p {
     margin: 0;
@@ -417,8 +511,50 @@ a {
     line-height: 30px;
     color: #464646;
 }
+/* Commanies logos */
+.companies-list {
+    display: flex;
+    margin: 0;
+    margin-bottom: 83px;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.companies-item a {
+    display: block;
+    width: 260px;
+    height: 100px;
+}
+.companies-item--dji a {
+    background-image: url(../img/logo_dji.jpg);
+}
+.companies-item--dji a:hover, .companies-item--dji a:focus, .companies-item--dji a:active {
+    background-image: url(../img/logo_dji_colored.jpg);
+}
+.companies-item--sp-gadgets a {
+    background-image: url(../img/logo_sp_gadgets.jpg);
+}
+.companies-item--sp-gadgets a:hover, .companies-item--sp-gadgets a:focus, .companies-item--sp-gadgets a:active {
+    background-image: url(../img/logo_sp_gadgets_colored.jpg);
+}
+.companies-item--gopro a {
+    background-image: url(../img/logo_gopro.jpg);
+}
+.companies-item--gopro a:hover, .companies-item--gopro a:focus, .companies-item--gopro a:active {
+    background-image: url(../img/logo_gopro_colored.jpg);
+}
+.companies-item--vive a {
+    background-image: url(../img/logo_vive.jpg);
+}
+.companies-item--vive a:hover, .companies-item--vive a:focus, .companies-item--vive a:active {
+    background-image: url(../img/logo_vive_colored.jpg);
+}
 /* About us */
-
+.info-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 76px;
+}
 .about-us p {
     font-size: 15px;
     font-weight: 300;
